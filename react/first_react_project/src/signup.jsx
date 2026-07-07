@@ -17,7 +17,7 @@ export default function Signup({ onClose }) {
 		<section id="signup">
 			<h1>Sign Up</h1>
 			{submitted ? (
-				<div>
+				<div className="signup-message">
 					<p>Thanks for signing up, {name || 'friend'}!</p>
 					<button onClick={onClose}>Close</button>
 				</div>
