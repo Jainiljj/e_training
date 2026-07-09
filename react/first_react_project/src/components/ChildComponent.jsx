@@ -12,7 +12,7 @@ function ChildComponent() {
   }, [number]);
 
   return (
-    <div style={{ border: '2px solid #007bff', padding: '20px', margin: '20px 0', borderRadius: '8px', backgroundColor: '#f8f9fa' }}>
+    <div>
       <h2>useMemo Demonstration</h2>
       
       <p><strong>Counter (forces re-render):</strong> {counter}</p>
@@ -22,13 +22,11 @@ function ChildComponent() {
       <div style={{ display: 'flex', gap: '10px', marginTop: '15px' }}>
         <button 
           onClick={() => setCounter(counter + 1)}
-          style={{ padding: '8px 16px', backgroundColor: '#28a745', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
         >
           Increment
         </button>
         <button 
           onClick={() => setNumber(counter)}
-          style={{ padding: '8px 16px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
         >
           Calculate
         </button>
