@@ -30,6 +30,11 @@ function ChildComponent() {
         >
           Calculate
         </button>
+          <button 
+          onClick={() => setNumber(counter +1)}
+        >
+          price calulator
+        </button>
       </div>
       
       <p style={{ fontSize: '0.9em', color: '#555', marginTop: '15px' }}>
