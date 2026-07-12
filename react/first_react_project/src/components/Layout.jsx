@@ -2,16 +2,16 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Practice from './practice';
+import InputComponent from './input';
 
 function Layout({ children }) {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <hr />
-      <div>
+      <div style={{ flex: 1, paddingBottom: '40px' }}>
         {children}
+        <InputComponent />
       </div>
-      <hr />
       <Practice />
       <Footer />
     </div>

@@ -30,46 +30,64 @@ function Signup() {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      
-      <form onSubmit={handleSignup}>
-        <div>
-          <label>Name:</label><br />
-          <input 
-            type="text" 
-            value={name} 
-            onChange={(e) => setName(e.target.value)} 
-            required 
-          />
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-6 col-lg-5">
+          <div className="card shadow-sm border-0">
+            <div className="card-body p-5">
+              <h2 className="text-center mb-4 fw-bold">Sign Up</h2>
+              
+              {error && <div className="alert alert-danger">{error}</div>}
+              
+              <form onSubmit={handleSignup}>
+                <div className="mb-3">
+                  <label className="form-label text-muted fw-semibold">Name</label>
+                  <input 
+                    type="text" 
+                    className="form-control form-control-lg"
+                    value={name} 
+                    onChange={(e) => setName(e.target.value)} 
+                    required 
+                    placeholder="Enter your name"
+                  />
+                </div>
+                
+                <div className="mb-3">
+                  <label className="form-label text-muted fw-semibold">Email address</label>
+                  <input 
+                    type="email" 
+                    className="form-control form-control-lg"
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    required 
+                    placeholder="name@example.com"
+                  />
+                </div>
+                
+                <div className="mb-4">
+                  <label className="form-label text-muted fw-semibold">Password</label>
+                  <input 
+                    type="password" 
+                    className="form-control form-control-lg"
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)} 
+                    required 
+                    placeholder="Create a password"
+                  />
+                </div>
+                
+                <button type="submit" className="btn btn-primary btn-lg w-100">
+                  Sign Up
+                </button>
+              </form>
+              
+              <div className="text-center mt-4">
+                <p className="text-muted">Already have an account? <Link to="/login" className="text-decoration-none fw-bold">Login here</Link></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <br />
-        <div>
-          <label>Email:</label><br />
-          <input 
-            type="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
-          />
-        </div>
-        <br />
-        <div>
-          <label>Password:</label><br />
-          <input 
-            type="password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
-          />
-        </div>
-        <br />
-        <button type="submit">Sign Up</button>
-      </form>
-      
-      <br />
-      <Link to="/login">Go to Login</Link>
+      </div>
     </div>
   );
 }

@@ -12,27 +12,31 @@ function Header() {
   };
 
   return (
-    <div>
-      <h2>My App</h2>
-      <nav>
-        <Link to="/">Home</Link> |{' '}
+    <header className="app-header">
+      <div className="header-brand">
+        <Link to="/">My App</Link>
+      </div>
+      
+      <nav className="header-nav">
+        <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/student_form">Student Form</Link>
       </nav>
-      <br />
-      <div>
+
+      <div className="header-actions">
         {user ? (
-          <div>
-            <span>Hi, {user.name}</span>
-            <button onClick={handleLogout} style={{ marginLeft: '10px' }}>Logout</button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <span style={{ fontWeight: 500, color: 'white' }}>Hi, {user.name}</span>
+            <button className="btn-white" onClick={handleLogout}>Logout</button>
           </div>
         ) : (
-          <div>
-            <Link to="/login">Login</Link> |{' '}
-            <Link to="/signup">Sign Up</Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <Link to="/login" className="login-link">Login</Link>
+            <Link to="/signup" className="btn-white">Sign Up</Link>
           </div>
         )}
       </div>
-    </div>
+    </header>
   );
 }
 

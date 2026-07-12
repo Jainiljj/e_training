@@ -29,36 +29,52 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Email:</label><br />
-          <input 
-            type="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
-          />
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-6 col-lg-5">
+          <div className="card shadow-sm border-0">
+            <div className="card-body p-5">
+              <h2 className="text-center mb-4 fw-bold">Login</h2>
+              
+              {error && <div className="alert alert-danger">{error}</div>}
+              
+              <form onSubmit={handleLogin}>
+                <div className="mb-3">
+                  <label className="form-label text-muted fw-semibold">Email address</label>
+                  <input 
+                    type="email" 
+                    className="form-control form-control-lg"
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    required 
+                    placeholder="name@example.com"
+                  />
+                </div>
+                
+                <div className="mb-4">
+                  <label className="form-label text-muted fw-semibold">Password</label>
+                  <input 
+                    type="password" 
+                    className="form-control form-control-lg"
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)} 
+                    required 
+                    placeholder="Enter your password"
+                  />
+                </div>
+                
+                <button type="submit" className="btn btn-primary btn-lg w-100">
+                  Login
+                </button>
+              </form>
+              
+              <div className="text-center mt-4">
+                <p className="text-muted">Don't have an account? <Link to="/signup" className="text-decoration-none fw-bold">Sign up here</Link></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <br />
-        <div>
-          <label>Password:</label><br />
-          <input 
-            type="password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
-          />
-        </div>
-        <br />
-        <button type="submit">Login</button>
-      </form>
-      
-      <br />
-      <Link to="/signup">Go to Sign up</Link>
+      </div>
     </div>
   );
 }
