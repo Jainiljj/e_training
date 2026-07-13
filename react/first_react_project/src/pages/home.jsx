@@ -4,8 +4,9 @@ import DevCarousel from '../components/DevCarousel';
 function Home() {
   return (
     <div style={{ maxWidth: '1000px', margin: '20px auto 60px', width: '100%' }}>
-      
-      <DevCarousel />
+      <div className="p-45 bg-black">
+        <DevCarousel />
+      </div>
 
       <div className="features-section">
         <div className="features-header">
@@ -43,7 +44,7 @@ function Home() {
           </p>
         </div>
         <div className="playground-action">
-          <button className="btn-primary" onClick={() => {}}>
+          <button type="button" className="btn-primary" onClick={() => {}}>
             Go to Playground &rarr;
           </button>
         </div>
