@@ -1,28 +1,18 @@
-import React, {Component, Fragment} from 'react';
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import About from './pages/about';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import StudentForm from './pages/student_form';
+import React from "react";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/student_form" element={<StudentForm />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
-  );
-}
+const App = () => {
+  const display = (value) => {
+   console.log(value);
+   console.log("Button Clicked");
+};
+return(
+  <div>
+    <h1>
+      Events
+    </h1>
+    {<button onClick= {() => display("Data send")}>Click me</button>}
+  </div>
+);
+};
 
 export default App;
-

@@ -1,0 +1,113 @@
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 8rem 2rem 8rem; /* 8rem top padding clears the navbar */
+    min-height: 100vh;
+
+    background-color: rgba(31, 30, 30, 0.393);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    gap: 1.5rem; /* Replaces the br tags with consistent spacing */
+}
+
+.subtitle {
+    color: #9ca3af;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.title h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #9ca3af;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.text-white {
+    color: white;
+    font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+.btnsss {
+    background-color: #6B6BFF;
+    color: black;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btnsss:hover {
+    opacity: 0.9;
+}
+
+.hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.infor {
+    display: flex;
+    gap: 4rem; /* Spaces out the stats horizontally */
+}
+
+.infor-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.infor-item h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+}
+
+.infor-item p {
+    font-size: 1rem;
+    margin: 0;
+    color: #9ca3af;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.right h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.right img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
