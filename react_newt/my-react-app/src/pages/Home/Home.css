@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8rem 8rem 2rem 8rem; /* 8rem top padding clears the navbar */
+    padding: 8rem 8rem 2rem 8rem;
     min-height: 100vh;
 
     background-color: rgba(31, 30, 30, 0.393);
@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     color: white;
-    gap: 1.5rem; /* Replaces the br tags with consistent spacing */
+    gap: 1.5rem; 
 }
 
 .subtitle {
@@ -70,7 +70,7 @@
 
 .infor {
     display: flex;
-    gap: 4rem; /* Spaces out the stats horizontally */
+    gap: 4rem; 
 }
 
 .infor-item {

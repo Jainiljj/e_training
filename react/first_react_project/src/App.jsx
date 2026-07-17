@@ -10,7 +10,7 @@ return(
     <h1>
       Events
     </h1>
-    {<button onClick= {() => display("Data send")}>Click me</button>}
+    <button onClick={() => display("Data send")}>Click me</button>
   </div>
 );
 };
