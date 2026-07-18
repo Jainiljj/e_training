@@ -18,8 +18,8 @@ const Home = () => {
         </div>
 
         <div className="buttons">
-          <button className="btnsss">View my work</button>
-          <button className="btnsss">Get in touch</button>
+          <a href="#work"><button className="btnsss">View my work</button></a>
+          <a href="#contact"><button className="btnsss">Get in touch</button></a>
         </div>
         <hr className="hr" />
         <div className="infor">
